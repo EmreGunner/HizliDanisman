@@ -105,8 +105,8 @@ a {
 
 /* Styling for the chat bubble content when it's from the bot */
 .bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content {
-  background-color: #4b4b4b;
-  color:  #E6830F;
+  background-color: #F7F7F7;
+  color:  #333333;
 }
 
 /* Styling for the chat bubble content when it's from the user */
@@ -117,8 +117,8 @@ a {
 
 /* Styling for the composer section of the chat interface */
 .bpw-composer {
-  background-color: #000000;
-  border-top: 1px solid #4b4b4b;
+  background-color: #E6830F;
+  border-top: 2px solid #FFF3E0;
 }
 
 
@@ -133,8 +133,8 @@ a {
 /* Styling for the avatar of the bot */
 .bpw-bot-avatar img,
 .bpw-bot-avatar svg {
-  
-  border: 3px solid orangered;
+  background: #F7F7F7;
+  border: 3px solid #FFF3E0;
 }
 
 /* Styling for the general scrollbar in the web page */
