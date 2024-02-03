@@ -111,8 +111,9 @@ a {
 
 /* Styling for the chat bubble content when it's from the user */
 .bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content {
-  background-color: #000000;
+  background-color: #474747;
   color: #ffffff;
+  border-radius:  20px;
 }
 
 /* Styling for the composer section of the chat interface */
