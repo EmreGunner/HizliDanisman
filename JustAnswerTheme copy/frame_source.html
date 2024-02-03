@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Triggers</title>
+  </head>
+ 
+  <body>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    
+    <script defer>
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Buradan iletişime geçebilirsiniz",
+            "botConversationDescription": "Hukuki İhtiyaçlarınız İçin Yapay Zeka Destekli Yardımcımız.",
+            "botId": "b4bb017e-90d0-4ccb-985f-35fc55503cfc",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "b4bb017e-90d0-4ccb-985f-35fc55503cfc",
+            "webhookId": "6ae873c9-3dc5-4ab1-b9fd-f7195212004c",
+            "lazySocket": true,
+            "themeName": "prism",
+            "botName": "Hyghukuk - Sanal Asistan",
+            "avatarUrl": "https://www.hyghukuk.com.tr/site_document/sayfa_img/CLTCNJL2V_resim_2_10_2023_7_s.jpg",
+            "website": "https://www.hyghukuk.com.tr/",
+            "frontendVersion": "v1",
+            "theme": "prism",
+            "themeColor": "#2563eb"
+        });
+    </script>
+    
+    <button id="myButton">Click Me!</button>
+    <script>
+      function handleClick() {
+        console.log('Button clicked!')
+        window.botpressWebChat.sendPayload({
+          type: 'trigger',
+          payload: {
+            myCustomProperty: 'hello',
+          },
+        })
+      }
+ 
+      const button = document.getElementById('myButton')
+      button.addEventListener('click', handleClick)
+ 
+      window.botpressWebChat.onEvent(
+        function (event) {
+          if (event.type === 'LIFECYCLE.LOADED') {
+            window.botpressWebChat.sendEvent({ type: 'show' })
+          }
+        },
+        ['LIFECYCLE.LOADED']
+      )
+    </script>
+  </body>
+</html>
