@@ -118,7 +118,6 @@ a {
 /* Styling for the composer section of the chat interface */
 .bpw-composer {
   background-color: #E6830F;
-  border-top: 2px solid #FFF3E0;
 }
 
 
@@ -133,7 +132,7 @@ a {
 /* Styling for the avatar of the bot */
 .bpw-bot-avatar img,
 .bpw-bot-avatar svg {
-  background: #F7F7F7;
+  background: #474747;
   border: 3px solid #FFF3E0;
 }
 
